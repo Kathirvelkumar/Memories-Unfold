@@ -218,7 +218,7 @@ body {
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     #nav-bar h1 {
-        font-size: 1.5rem;
+        font-size: 20px;
     }
 
     .container {
@@ -227,8 +227,8 @@ body {
     }
 
     .TravelContainer {
-        width: 100%;
-        margin: 20px 0;
+        width: 95%;
+        margin: 20px auto;
     }
 
     .creation-popup {
@@ -240,4 +240,5 @@ body {
         height: 50px;
         font-size: 2rem;
     }
+
 }
