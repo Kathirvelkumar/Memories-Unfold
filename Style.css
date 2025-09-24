@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: url('./Image/BodieNC.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#nav-bar {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#nav-bar h1 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+#main-content {
+    margin-top: 100px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.TravelContainer {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 15px;
+    color: white;
+    word-wrap: break-word;
+}
+
+.TravelContainer h2 {
+    color: orange;
+    margin-bottom: 5px;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.TravelContainer h3 {
+    color: orange;
+    font-size: 20px;
+    font-weight: bolder;
+
+}
+
+.TravelContainer h4 {
+    color: greenyellow;
+    margin: 8px auto;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.TravelContainer p {
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    line-height: 1.5;
+}
+
+.TravelContainer .close-button {
+    padding: 8px 15px;
+    border-radius: 10px;
+    background-color: orange;
+    color: rgb(90, 3, 3);
+    border: none;
+    margin-top: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.TravelContainer .close-button:hover {
+    background-color: darkorange;
+    color: white;
+}
+
+#add-button {
+    width: 60px;
+    height: 60px;
+    color: black;
+    border-radius: 50%;
+    border: none;
+    font-size: 2.5rem;
+    background-color: white;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#add-button:hover {
+    background-color: orange;
+    color: white;
+}
+
+.overlay {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.75;
+    z-index: 10;
+    display: none;
+}
+
+.creation-popup {
+    background-color: #ffffff50;
+    backdrop-filter: blur(5px);
+    width: 400px;
+    max-width: 90%;
+    padding: 20px;
+    border-radius: 15px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    display: none;
+}
+
+.creation-popup h2 {
+    color: orange;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.creation-popup form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.creation-popup input,
+.creation-popup select,
+.creation-popup textarea {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid black;
+    padding: 8px 5px;
+    font-size: 1rem;
+    outline: none;
+    color: black;
+    transition: 0.3s;
+}
+
+.creation-popup input:focus,
+.creation-popup select:focus,
+.creation-popup textarea:focus {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-bottom-color: darkorange;
+}
+
+.creation-popup textarea {
+    border: 2px solid black;
+    border-radius: 5px;
+    height: 100px;
+    resize: vertical;
+}
+
+.creation-popup input::placeholder,
+.creation-popup textarea::placeholder,
+.creation-popup select option[disabled] {
+    color: black;
+    opacity: 0.8;
+}
+
+.popup-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.creation-popup button {
+    padding: 10px 20px;
+    border-radius: 15px;
+    background-color: orange;
+    border: none;
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.creation-popup button:hover {
+    background-color: darkorange;
+    color: white;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    #nav-bar h1 {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .TravelContainer {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .creation-popup {
+        width: 90%;
+    }
+
+    #add-button {
+        width: 50px;
+        height: 50px;
+        font-size: 2rem;
+    }
+}

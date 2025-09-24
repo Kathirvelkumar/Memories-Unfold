@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Unfold</title>
+    <link rel="stylesheet" href="./Style.css">
+</head>
+
+<body>
+
+    <nav id="nav-bar">
+        <h1>Memories Unfold - Travel Tales</h1>
+    </nav>
+
+    <div id="main-content">
+        <section class="container">
+            <div class="TravelContainer">
+                <h2>Tirunelveli</h2>
+                <h3>Courtallam</h3>
+                <h4>2024/07/01</h4>
+                <h4>Train</h4>
+                <p>The cool waters of Courtallam Falls hit like a natural massage on my shoulders. Mist wrapped around
+                    me as the fresh scent of herbs from the Western Ghats filled the air. Laughter echoed as people
+                    bathed together beneath the roaring cascade. The rocky floor was slippery but added to the thrill of
+                    the experience. Refreshed and calm, I stepped away feeling nature’s energy still flowing through me.
+                </p>
+                <button class="close-button">CLOSE</button>
+            </div>
+        </section>
+    </div>
+
+    <div class="overlay"></div>
+
+    <div class="creation-popup">
+        <h2>Save Memory</h2>
+        <form>
+            <input type="text" placeholder="-- District --" name="district-name" id="creation-popup-districtname">
+            <input type="text" placeholder="-- place-name --" name="place-name" id="creation-popup-placename">
+            <input type="date" name="timeline" id="creation-popup-date">
+            <select name="transport" id="creation-popup-transport">
+                <option value="" disabled selected>-- Transport --</option>
+                <option>Bike Ride</option>
+                <option>Car</option>
+                <option>Bus</option>
+                <option>Train</option>
+                <option>Flight</option>
+            </select>
+            <textarea name="description" placeholder="-- Short Story --" id="creation-popup-shortstory"></textarea>
+            <div class="popup-buttons">
+                <button id="add-popup" type="submit">ADD</button>
+                <button id="remove-popup" type="button">REMOVE</button>
+            </div>
+        </form>
+    </div>
+
+    <button id="add-button">+</button>
+
+    <script src="./Script.js"></script>
+</body>
+
+</html>
